@@ -1,0 +1,240 @@
+:root {
+  /* --### Primary*/
+
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* ## Gradients */
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+  /* ### Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavander: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+/* - Weights: 500, 700, 800 */
+
+/* Reset CSS */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+svg,
+img {
+  display: block;
+}
+
+p {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--pale-blue);
+}
+
+/* Main  */
+
+main {
+  display: flex;
+  width: 712px;
+  height: 512px;
+  background-color: var(--white);
+  border-radius: 24px;
+  box-shadow: 0px 1px 32px -18px rgba(0, 0, 0, 1);
+}
+button {
+  padding: 16px 28px;
+  background-color: var(--dark-gray-blue);
+  outline: 0;
+  border: 0;
+  color: var(--white);
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all ease-in-out 0.5;
+}
+button:hover {
+  background: linear-gradient(
+    0deg,
+    var(--light-royal-blue),
+    var(--light-slate-blue)
+  );
+}
+
+/* Result Side */
+
+.result-side {
+  width: 50%;
+  padding: 4em 2em;
+  background: linear-gradient(
+    0deg,
+    var(--light-royal-blue),
+    var(--light-slate-blue)
+  );
+  height: 100%;
+  border-radius: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  overflow: hidden;
+}
+.result-side h1 {
+  color: var(--white);
+  opacity: 0.5;
+  font-size: 26px;
+}
+.result-side h2 {
+  color: var(--white);
+}
+.result-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: hsla(0, 0%, 100%, 0.5);
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(
+    var(--violet-blue-circle),
+    var(--persian-blue-circle)
+  );
+  border-radius: 50%;
+}
+
+.result-score span {
+  color: var(--white);
+  font-size: 64px;
+  font-weight: 800;
+}
+.result-descp {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.result-descp h3 {
+  font-size: 2rem;
+  color: var(--white);
+}
+.result-descp p {
+  text-align: center;
+  max-width: 24ch;
+  color: var(--white);
+  opacity: 0.7;
+}
+/* Summary Side */
+.summary-side {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 4em 2em;
+  justify-content: space-between;
+  color: var(--dark-gray-blue);
+  font-weight: 700;
+}
+.summary-side span {
+  opacity: 0.5;
+}
+.summary-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: var(--light-red);
+}
+.summary-name2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: hsla(39, 100%, 56%);
+}
+.summary-name3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: hsl(166, 100%, 37%);
+}
+.summary-name4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: hsl(234, 85%, 45%);
+}
+.summary-accent1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsla(0, 100%, 67%, 0.1);
+  padding: 1em;
+  border-radius: 12px;
+}
+.summary-accent2 {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsla(39, 100%, 56%, 0.1);
+  padding: 1em;
+  border-radius: 12px;
+}
+.summary-accent3 {
+  display: flex;
+  background-color: hsla(166, 100%, 37%, 0.1);
+  padding: 1em;
+  border-radius: 12px;
+  justify-content: space-between;
+}
+.summary-accent4 {
+  display: flex;
+  background-color: hsla(234, 85%, 45%, 0.1);
+  padding: 1em;
+  border-radius: 12px;
+  justify-content: space-between;
+}
+
+@media (max-width: 760px) {
+  main {
+    flex-direction: column;
+    width: 375px;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .result-side {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding: 2em 2em;
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  .summary-side {
+    width: 100%;
+    gap: 24px;
+    height: 100%;
+    padding: 2em 2em;
+  }
+}
